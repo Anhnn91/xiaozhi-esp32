@@ -186,3 +186,7 @@ public:
 };
 
 DECLARE_BOARD(myboardais32mini);
+extern "C" Board* create_board() {
+    static myboardais32mini board;
+    return &board;
+}

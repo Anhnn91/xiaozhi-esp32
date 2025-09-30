@@ -20,10 +20,9 @@
 #include <esp_lcd_panel_sh1106.h>
 #endif
 
-#define TAG "myboard_ai_s32mini"
+#define TAG "myboardais32mini"
 
-/// @brief MyBoard AI S32 Mini
-class myboard_ai_s32mini : public WifiBoard {
+class myboardais32mini : public WifiBoard {
 private:
     i2c_master_bus_handle_t display_i2c_bus_;
     esp_lcd_panel_io_handle_t panel_io_ = nullptr;
@@ -154,7 +153,7 @@ private:
     }
 
 public:
-    myboard_ai_s32mini() :
+    myboardais32mini() :
         boot_button_(BOOT_BUTTON_GPIO),
         touch_button_(TOUCH_BUTTON_GPIO),
         volume_up_button_(VOLUME_UP_BUTTON_GPIO),
@@ -186,4 +185,4 @@ public:
     }
 };
 
-DECLARE_BOARD(myboard_ai_s32mini);
+DECLARE_BOARD(myboardais32mini);

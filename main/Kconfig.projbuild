@@ -88,7 +88,7 @@ choice BOARD_TYPE
     config BOARD_TYPE_BREAD_COMPACT_WIFI
         bool "Bread Compact WiFi (面包板)"
         depends on IDF_TARGET_ESP32S3
-    config MYBOARD_AI_S32MINI
+    config BOARD_TYPE_MYBOARD_AI_S32MINI
         bool "MyBoard AI S32Mini (面包板)"
         depends on IDF_TARGET_ESP32S3
     config BOARD_TYPE_BREAD_COMPACT_WIFI_LCD

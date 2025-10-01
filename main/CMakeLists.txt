@@ -36,6 +36,7 @@ set(SOURCES "audio/audio_codec.cc"
             "device_state_event.cc"
             "assets.cc"
             "main.cc"
+            
             )
 
 set(INCLUDE_DIRS "." "display" "display/lvgl_display" "display/lvgl_display/jpg" "audio" "protocols")
@@ -66,6 +67,10 @@ set(BUILTIN_ICON_FONT font_awesome_14_1)
 # Set default assets if the board uses partition table V2
 if(CONFIG_BOARD_TYPE_BREAD_COMPACT_WIFI)
     set(BOARD_TYPE "bread-compact-wifi")
+    set(BUILTIN_TEXT_FONT font_puhui_basic_14_1)
+    set(BUILTIN_ICON_FONT font_awesome_14_1)
+elseif(CONFIG_MYBOARD_AI_S32MINI)
+    set(BOARD_TYPE "myboard-ai-s32mini")
     set(BUILTIN_TEXT_FONT font_puhui_basic_14_1)
     set(BUILTIN_ICON_FONT font_awesome_14_1)
 elseif(CONFIG_BOARD_TYPE_BREAD_COMPACT_ML307)

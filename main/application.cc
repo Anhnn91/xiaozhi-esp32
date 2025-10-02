@@ -677,6 +677,7 @@ void Application::SetDeviceState(DeviceState state) {
     DeviceStateEventManager::GetInstance().PostStateChangeEvent(previous_state, state);
 
     auto& board = Board::GetInstance();
+    board.Init();  // Đoan code này để đảm bảo board được khởi tạo
     auto display = board.GetDisplay();
     auto led = board.GetLed();
     led->OnStateChanged();

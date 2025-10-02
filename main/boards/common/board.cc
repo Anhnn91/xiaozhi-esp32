@@ -176,8 +176,3 @@ std::string Board::GetSystemInfoJson() {
     json += R"(})";
     return json;
 }
-
-void *create_board()
-{
-    return nullptr;
-}
